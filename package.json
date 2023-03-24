@@ -1,13 +1,19 @@
 {
   "private": true,
   "scripts": {
-    "build": "nuxt build",
+    "build": "npx nuxi generate",
+    "deploy": "npx nuxi generate && firebase deploy",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "emulate": "firebase emulators:start --export-on-exit ignore/ --import ignore/"
   },
   "devDependencies": {
+    "@nuxtjs/html-validator": "^1.2.4",
     "nuxt": "^3.3.1"
+  },
+  "dependencies": {
+    "firebase": "^9.18.0"
   }
 }
